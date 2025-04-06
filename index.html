@@ -1,165 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alicia Ruiz Simón | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alicia Ruiz | Portfolio</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            background-color: #0a0f2c;
+            color: #e0e6f6;
+            scroll-behavior: smooth;
+        }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #12193f;
+        }
 
-  <!-- Feather Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+        header img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #3e63dd;
+        }
 
-  <style>
-    :root {
-      --primary: #a288e3;
-      --background: #0f0f11;
-      --text: #e0e0e0;
-      --card: #1a1a1d;
-    }
+        h1 {
+            color: #3e63dd;
+            margin-top: 1rem;
+            font-size: 2.5rem;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+        p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: var(--background);
-      color: var(--text);
-      display: flex;
-      min-height: 100vh;
-    }
+        .projects {
+            display: grid;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
 
-    nav {
-      width: 220px;
-      background-color: #151518;
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: fixed;
-      height: 100vh;
-    }
+        .card {
+            background-color: #1a214d;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
 
-    nav h1 {
-      color: var(--primary);
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
 
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      margin-bottom: 1.2rem;
-      display: block;
-      transition: color 0.3s;
-    }
+        .card h2 {
+            color: #3e63dd;
+        }
 
-    nav a:hover {
-      color: var(--primary);
-    }
+        .button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            background-color: #3e63dd;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
 
-    main {
-      margin-left: 220px;
-      padding: 2rem;
-      width: 100%;
-    }
+        .button:hover {
+            background-color: #2641a3;
+        }
 
-    section {
-      margin-bottom: 4rem;
-    }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            background-color: #12193f;
+        }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background-color: var(--card);
-      border-radius: 10px;
-      padding: 1.5rem;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+        footer a {
+            color: #5d8df6;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
 </head>
-
 <body>
-  <nav>
-    <div>
-      <h1>Alicia Ruiz</h1>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
+
+<header>
+    <img src="fotoMat.jpg" alt="Foto de Alicia Ruiz">
+    <h1>Alicia Ruiz Simón</h1>
+    <p>Matemática especializada en análisis de datos</p>
+</header>
+
+<section class="projects">
+    <div class="card">
+        <img src="Tableau.jpg" alt="Proyecto Tableau">
+        <h2>Análisis de ventas de un negocio local (Tableau)</h2>
+        <p>Análisis de KPIs, desarrollo de objetivos y explicación del proceso completo. Reporte con gráficas y dashboard. Se emplean técnicas de análisis de KPIs, diseño de modelo en Snowflake y se emplean herramientas como drawSQL y Tableau para la visualización de datos.</p>
+        <a class="button" href="TrabajoIN_AliciaRuizSimón%20(3).pdf" target="_blank">Ver proyecto</a>
     </div>
-    <div>
-      <a href="https://linkedin.com/in/aliciaruizsim%C3%B3n" target="_blank"><i data-feather="linkedin"></i></a>
-      <a href="https://github.com/Aliciars" target="_blank"><i data-feather="github"></i></a>
-      <a href="mailto:aliciaruiz12400@gmail.com"><i data-feather="mail"></i></a>
+
+    <div class="card">
+        <img src="PowerBi.jpg" alt="Proyecto Power BI">
+        <h2>Dashboard de importaciones de especias (Power BI)</h2>
+        <p>Análisis de las importaciones de especias a Estados Unidos a través de diferentes gráficas en Power BI. Datos obtenidos de data.gov. Se realiza una transformación de los datos en Power Query para proceder a la creación del dashboard pedido con Power BI.</p>
+        <a class="button" href="SpiceImport_US%20Copy.pdf" target="_blank">Ver proyecto</a>
     </div>
-  </nav>
+</section>
 
-  <main>
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p style="margin-top:1rem; max-width: 600px;">
-        Soy Alicia Ruiz Simón, matemática especializada en análisis de datos. Actualmente estudio un Máster en Big Data y me apasiona transformar datos en conocimiento útil. He trabajado con herramientas como Tableau, Power BI, SQL o Snowflake para el análisis, visualización y modelado de datos. Siempre en aprendizaje.
-      </p>
-    </section>
+<footer>
+    <p>Contacto: aliciaruiz12400@gmail.com</p>
+    <a href="https://linkedin.com/in/aliciaruizsim%C3%B3n" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/Aliciars" target="_blank">GitHub</a>
+</footer>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <div class="projects">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200.png?text=Proyecto+1" alt="Proyecto Tableau">
-          <h3>Análisis de ventas (Tableau)</h3>
-          <p>Reporte de ventas de un negocio local con KPIs, Snowflake, drawSQL y dashboard interactivo en Tableau.</p>
-          <a href="TrabajoIN_AliciaRuizSimon.pdf" target="_blank">Ver proyecto</a>
-        </div>
-
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200.png?text=Proyecto+2" alt="Proyecto PowerBI">
-          <h3>Dashboard importaciones (Power BI)</h3>
-          <p>Análisis de importaciones de especias a EEUU con limpieza de datos en Power Query y visualizaciones en Power BI.</p>
-          <a href="SpiceImport_US.pdf" target="_blank">Ver proyecto</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Email: aliciaruiz12400@gmail.com</p>
-    </section>
-
-    <footer>
-      &copy; 2025 Alicia Ruiz Simón
-    </footer>
-  </main>
-
-  <script>
-    feather.replace();
-  </script>
 </body>
-
 </html>
