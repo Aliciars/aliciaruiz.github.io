@@ -3,41 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Alicia Ruiz | Portfolio </title>
+    <title>Alicia Ruiz | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #eee;
+            display: flex;
         }
-        header {
-            text-align: center;
-            padding: 2rem;
-            background-color: #d0f3f5;  /* azul turquesa clarito */
+
+        /* Menú lateral */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem 1rem;
         }
-        header img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #3ac1c9;  /* azul turquesa */
+
+        nav ul {
+            list-style: none;
+            padding: 0;
         }
-        h1 {
-            color: #3ac1c9;
-            margin-top: 1rem;
-            font-size: 2.5rem;
+
+        nav ul li {
+            margin-bottom: 1.5rem;
         }
-        p {
-            margin-top: 0.5rem;
+
+        nav ul li a {
+            color: #888;
+            text-decoration: none;
             font-size: 1.1rem;
+            transition: color 0.3s;
         }
-        .projects {
-            display: grid;
-            gap: 2rem;
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #00bfbf;
+        }
+
+        .contact-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .contact-icons a {
+            color: #888;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .contact-icons a:hover {
+            color: #00bfbf;
+        }
+
+        /* Contenido principal */
+        main {
+            margin-left: 200px;
             padding: 2rem;
-            max-width: 900px;
-            margin: auto;
+            width: 100%;
+        }
+
+        section {
+            margin-bottom: 5rem;
+            scroll-margin-top: 100px;
+        }
+
+        h1, h2 {
+            color: #00bfbf;
+        }
+
+        img.foto-perfil {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #00bfbf;
+            display: block;
+            margin-bottom: 1rem;
         }
         .card {
             background-color: #ffffff;
@@ -61,47 +111,81 @@
         .button:hover {
             background-color: #268892;  /* azul más oscuro */
         }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            background-color: #d0f3f5;  /* azul clarito */
-        }
-        footer a {
-            color: #268892;
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
     </style>
 </head>
 
 <body>
 
-<header>
-    <img src="img/RuizSimónAlicia_MG_2372.jpg" alt="Foto de perfil de Alicia Ruiz">
-    <h1>Alicia Ruiz</h1>
-    <p>Matemática | Estudiante de Máster de Big Data</p>
-</header>
+<nav>
+    <ul>
+        <li><a href="#sobre-mi" class="active">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#formacion">Formación</a></li>
+    </ul>
 
-<section class="projects">
-    <div class="card">
-        <h2>Análisis de ventas de un negocio local (Tableau)</h2>
-        <p>Análisis de KPIs, desarrollo de objetivos y explicación del proceso completo. Reporte con gráficas y dashboard. Se emplean técnicas de análisis de KPIs, diseño de modelo en Snowflake y se emplean herramientas como drawSQL y Tableau para la visualización de datos.</p>
-        <a class="button" href="TrabajoIN_AliciaRuizSimón%20(3).pdf" target="_blank">Ver proyecto</a>
+    <div class="contact-icons">
+        <a href="mailto:aliciaruiz12400@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/aliciaruizsim%C3%B3n" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Aliciars" target="_blank"><i class="fab fa-github"></i></a>
     </div>
+</nav>
 
-    <div class="card">
-        <h2>Dashboard de importaciones de especias (Power BI)</h2>
-        <p>Análisis de las importaciones de especias a Estados Unidos a través de diferentes gráficas en Power BI. Datos obtenidos de data.gov. Se realiza una transformación de los datos en Power Query para proceder a la creación del dashboard pedido con Power Bi.</p>
-        <a class="button" href="SpiceImport_US%20Copy.pdf" target="_blank">Ver proyecto</a>
-    </div>
-</section>
+<main>
 
-<footer>
-    <p>Contacto: aliciaruiz12400@gmail.com</p>
-    <a href="https://linkedin.com/in/aliciaruizsim%C3%B3n" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/Aliciars" target="_blank">GitHub</a>
-</footer>
+    <section id="sobre-mi">
+        <h1>Alicia Ruiz</h1>
+        <img class="foto-perfil" src="img/RuizSimónAlicia_MG_2372.jpg" alt="Foto de Alicia Ruiz">
+        <p>Matemática apasionada por los datos y estudiante de Máster en Big Data. Me encanta transformar datos en conocimiento y aportar soluciones a través del análisis.</p>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div>
+            <h3>Análisis de ventas (Tableau)</h3>
+            <p>Análisis de KPIs, dashboards y diseño de modelo de datos.</p>
+            <a class="button" href="TrabajoIN_AliciaRuizSimón%20(3).pdf" target="_blank">Ver proyecto</a>
+        </div>
+
+        <div>
+            <h3>Dashboard de especias (Power BI)</h3>
+            <p>Visualización de importaciones de especias a EE.UU con Power BI.</p>
+            <a class="button" href="SpiceImport_US%20Copy.pdf" target="_blank">Ver proyecto</a>
+        </div>
+    </section>
+
+    <section id="formacion">
+        <h2>Formación</h2>
+        <ul>
+            <li>Grado en Matemáticas | Universidad Nacional de Educación a Distancia</li>
+            <li>Máster en Big Data | Universidad de Murcia </li>
+            <li>Certificaciones en Python, Power BI, Tableau, SQL.</li>
+        </ul>
+    </section>
+
+</main>
+
+<script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    window.addEventListener('scroll', () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 120) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
