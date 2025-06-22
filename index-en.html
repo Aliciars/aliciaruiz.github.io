@@ -113,6 +113,19 @@
             object-position: 50% 30%;
             border: 3px solid #0050b3;
         }
+        .language-switcher {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        .language-switcher select {
+            padding: 0.4rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
 
         /* Cards */
         .card, section > div {
@@ -160,14 +173,6 @@
         />
     </div>
 
-    <div style="text-align: center; margin-bottom: 2rem;">
-        <select onchange="changeLanguage(this.value)" style="padding: 0.4rem; border-radius: 5px; border: 1px solid #ccc;">
-            <option value="index.html" >ES</option>
-            <option value="index-en.html" selected>EN</option>
-        </select>
-    </div>
-
-
     <ul>
         <li><a href="#about-me" class="active">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -198,6 +203,13 @@
 </nav>
 
 <main>
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <select onchange="changeLanguage(this.value)" style="padding: 0.4rem; border-radius: 5px; border: 1px solid #ccc;">
+            <option value="index.html" >ES</option>
+            <option value="index-en.html" selected>EN</option>
+        </select>
+    </div>
+    
     <section id="about-me">
         <h1>Alicia Ruiz Simón</h1>
         <p>
