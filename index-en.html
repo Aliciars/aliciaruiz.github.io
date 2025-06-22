@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alicia Ruiz | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f7f9fc;
+            color: #1a1a1a;
+            display: flex;
+        }
+
+        /* Sidebar menu */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 100vh;
+            background-color: #e7ecf5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem 1rem;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #3a3a3a;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #0050b3; /* Klein blue */
+            font-weight: bold;
+        }
+
+        .contact-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .contact-icons a {
+            color: #555;  /* soft gray */
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .contact-icons a:hover {
+            color: #0050b3; /* klein blue on hover */
+        }
+
+        .contact-icons a.pdf-icon {
+            color: #d93025; /* typical PDF red */
+        }
+
+        .contact-icons a.pdf-icon:hover {
+            color: #a52714; /* darker red on hover */
+        }
+
+        /* Main content */
+        main {
+            margin-left: 220px;
+            padding: 2rem 3rem;
+            width: 100%;
+        }
+
+        section {
+            margin-bottom: 5rem;
+            scroll-margin-top: 100px;
+        }
+
+        h1, h2 {
+            color: #0050b3;
+        }
+
+        h3 {
+            color: #1a1a1a;
+            margin-top: 1.5rem;
+        }
+
+        .profile-pic {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.2rem;
+        }
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            object-position: 50% 30%;
+            border: 3px solid #0050b3;
+        }
+
+        /* Cards */
+        .card, section > div {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            margin-top: 1rem;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            background-color: #0050b3;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #003d8f;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="profile-pic">
+        <img
+          class="foto-perfil"
+          src="Ruiz Simón, Alicia_MG_2372.jpg"
+          alt="Photo of Alicia Ruiz"
+        />
+    </div>
+
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <select onchange="changeLanguage(this.value)" style="padding: 0.4rem; border-radius: 5px; border: 1px solid #ccc;">
+            <option value="index.html" selected>ES</option>
+            <option value="index-en.html">EN</option>
+        </select>
+    </div>
+
+
+    <ul>
+        <li><a href="#about-me" class="active">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+    </ul>
+
+    <div class="contact-icons">
+        <a href="mailto:aliciaruiz12400@gmail.com" title="Email"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a
+          href="https://linkedin.com/in/aliciaruizsimón"
+          target="_blank"
+          title="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Aliciars" target="_blank" title="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="AliciaCV2025_MAT.pdf"
+          target="_blank"
+          title="Resume PDF"
+          class="pdf-icon"
+          ><i class="fas fa-file-pdf"></i
+        ></a>
+    </div>
+</nav>
+
+<main>
+    <section id="about-me">
+        <h1>Alicia Ruiz Simón</h1>
+        <p>
+          I hold a degree in Mathematics from UNED and a degree in Primary
+          Education from the University of Murcia with an English specialization
+          from WSB Merito de Wroclaw, Poland. Currently, I work as a teacher at a
+          primary education center, while continuing to expand my academic
+          training in the field of Big Data.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div>
+            <h3>PM2.5 Pollution Prediction in Germany (R)</h3>
+            <p>
+              Data mining project focused on predicting PM2.5 particle pollution
+              levels in German regions. Machine learning models such as neural
+              networks, SVM, decision trees, and gradient boosting were applied to
+              identify areas with the highest pollution risk.
+            </p>
+            <a class="button" href="PracticaMD_Alicia_rmdmaterial.html" target="_blank"
+              >View project</a
+            >
+        </div>
+
+        <div>
+            <h3>Master’s Thesis: Eating Disorder Detection (Python)</h3>
+            <p>
+              Development of a prediction system for potential cases of eating
+              disorders (ED) based on the analysis of user message language using
+              Natural Language Processing (NLP) techniques. Machine learning models
+              detect linguistic patterns indicative of risk.
+            </p>
+            <a class="button" href="TFM.pdf" target="_blank">View project</a>
+        </div>
+
+        <div>
+            <h3>Sales Analysis (Tableau)</h3>
+            <p>Analysis of KPIs, dashboards, and data model design.</p>
+            <a class="button" href="TrabajoIN_AliciaRuizSimón%20(3).pdf" target="_blank"
+              >View project</a
+            >
+        </div>
+
+        <div>
+            <h3>Spice Dashboard (Power BI)</h3>
+            <p>Visualization of spice imports to the U.S. with Power BI.</p>
+            <a class="button" href="SpiceImport_US%20Copy.pdf" target="_blank"
+              >View project</a
+            >
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>Master’s Degree in Big Data | University of Murcia</li>
+            <li>Bachelor’s Degree in Mathematics | National University of Distance Education (UNED)</li>
+            <li>Certifications in Python, Power BI, Tableau, SQL.</li>
+        </ul>
+    </section>
+</main>
+
+<script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    window.addEventListener('scroll', () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 120) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    function changeLanguage(url) {
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>
